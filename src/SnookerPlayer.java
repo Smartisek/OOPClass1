@@ -26,4 +26,11 @@ public class SnookerPlayer {
     public void increasePrizeMoney(double amount){
         prizeMoney = prizeMoney + amount;
     }
+
+    public void updatePerformance(boolean wonGame){
+        numberOfGames+=1;
+        if(wonGame == true){
+            numberOfWonGames+=1;
+        }
+    }
 }
