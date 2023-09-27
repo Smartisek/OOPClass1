@@ -1,9 +1,19 @@
-public class SnookerPlayer {
+public class SnookerPlayer implements Comparable<SnookerPlayer> {
     private String name;
     private String nationality;
     private double prizeMoney;
     private Integer numberOfGames;
     private Integer numberOfWonGames;
+
+    public int compareTo(SnookerPlayer other) {
+        if (this.prizeMoney < other.prizeMoney) {
+            return -1;
+        } else if (this.prizeMoney > other.prizeMoney)
+            return 1;
+
+            return 0;
+
+    }
 
     public SnookerPlayer(String name, String nationality, double prizeMoney, Integer numberOfGames, Integer numberOfWonGames) {
         this.name = name;
